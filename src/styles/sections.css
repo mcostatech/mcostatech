@@ -1,0 +1,189 @@
+/* ===== Hero ===== */
+.hero__eyebrow {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.hero h1 {
+  font-size: var(--fs-2xl);
+  max-width: 16ch;
+}
+
+.hero__subheadline {
+  margin-top: var(--space-sm);
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+  max-width: 42ch;
+}
+
+.hero__lede {
+  margin-top: var(--space-xs);
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+}
+
+.hero__actions {
+  margin-top: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.hero__note {
+  margin-top: var(--space-md);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+/* Ilustração abstrata do hero: formas técnicas simples, sem estética "gamer" */
+.hero__visual {
+  position: relative;
+  aspect-ratio: 4 / 3.4;
+  border-radius: var(--radius-lg);
+  border: var(--border-thin);
+  background: var(--color-surface);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.hero__visual svg {
+  width: 82%;
+  height: 82%;
+}
+
+/* ===== Sobre ===== */
+.about__inner {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.about__logo {
+  display: grid;
+  place-items: center;
+}
+
+/* .about__logo img {
+  width: 100%;
+  max-width: 260px;
+} */
+
+@media (min-width: 900px) {
+  .about__inner {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.about h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-sm);
+  max-width: 20ch;
+}
+
+.about p + p {
+  margin-top: var(--space-sm);
+}
+
+.about__founder {
+  margin-top: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--fs-sm);
+}
+
+.about__founder-mark {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--color-surface-alt);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+/* ===== Para pequenos negócios ===== */
+.business-panel {
+  border-radius: var(--radius-lg);
+  border: var(--border-thin);
+  background: var(--color-surface);
+  padding: var(--space-lg);
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .business-panel {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    padding: var(--space-xl);
+  }
+}
+
+.business-panel h2 {
+  font-size: var(--fs-xl);
+  max-width: 18ch;
+}
+
+.business-panel p {
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+  max-width: var(--measure);
+}
+
+.business-panel__actions {
+  margin-top: var(--space-md);
+}
+
+/* ===== CTA final ===== */
+.cta-final {
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  background: linear-gradient(
+    155deg,
+    var(--brand-blue-strong),
+    var(--brand-blue) 55%,
+    var(--brand-cyan)
+  );
+  color: #ffffff;
+}
+
+.cta-final h2 {
+  font-size: var(--fs-xl);
+  max-width: 22ch;
+  margin-inline: auto;
+}
+
+.cta-final p {
+  margin-top: var(--space-sm);
+  max-width: var(--measure);
+  margin-inline: auto;
+  opacity: 0.92;
+}
+
+.cta-final .hero__actions {
+  justify-content: center;
+  margin-top: var(--space-lg);
+}
+
+.cta-final .btn--primary {
+  background: #ffffff;
+  color: var(--brand-blue-strong);
+}
+
+.cta-final .btn--secondary {
+  border-color: color-mix(in srgb, #ffffff 55%, transparent);
+  color: #ffffff;
+}
+
+.cta-final .btn--secondary:hover,
+.cta-final .btn--secondary:focus-visible {
+  background: color-mix(in srgb, #ffffff 15%, transparent);
+}
