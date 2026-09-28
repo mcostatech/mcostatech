@@ -1,0 +1,1242 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MCosta Tech | Suporte e Soluções em Tecnologia</title>
+    <meta
+      name="description"
+      content="Suporte, manutenção e soluções em tecnologia para pessoas e pequenos negócios. Formatação, diagnóstico, manutenção, backup e suporte técnico."
+    />
+    <link rel="canonical" href="https://mcostatech.com.br/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MCosta Tech" />
+    <meta
+      property="og:title"
+      content="MCosta Tech | Suporte e Soluções em Tecnologia"
+    />
+    <meta
+      property="og:description"
+      content="Suporte, manutenção e soluções em tecnologia para pessoas e pequenos negócios."
+    />
+    <meta property="og:url" content="https://mcostatech.com.br/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:image"
+      content="https://mcostatech.com.br/src/assets/images/social-preview.jpg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="MCosta Tech | Suporte e Soluções em Tecnologia"
+    />
+    <meta
+      name="twitter:description"
+      content="Suporte, manutenção e soluções em tecnologia para pessoas e pequenos negócios."
+    />
+    <meta
+      name="twitter:image"
+      content="https://mcostatech.com.br/src/assets/images/social-preview.jpg"
+    />
+
+    <meta
+      name="theme-color"
+      content="#f6f8fc"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#020817"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="icon" href="src/assets/favicon.svg" type="image/svg+xml" />
+
+    <!-- Evita flash do tema errado: aplica preferência manual salva antes da 1ª pintura.
+       Sem preferência manual, o CSS já segue prefers-color-scheme sozinho (ver variables.css). -->
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("mcostatech-theme");
+        } catch (e) {}
+        if (theme !== "dark" && theme !== "light") {
+          theme =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="src/styles/variables.css" />
+    <link rel="stylesheet" href="src/styles/base.css" />
+    <link rel="stylesheet" href="src/styles/layout.css" />
+    <link rel="stylesheet" href="src/styles/components.css" />
+    <link rel="stylesheet" href="src/styles/sections.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "MCosta Tech",
+        "description": "Suporte, manutenção e soluções em tecnologia para pessoas e pequenos negócios.",
+        "url": "https://mcostatech.com.br/",
+        "email": "mcostatech@hotmail.com",
+        "areaServed": "Sorocaba, São Paulo",
+        "sameAs": ["https://instagram.com/mcostatech"]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="logo" href="#inicio" aria-label="MCosta Tech — início">
+          <img
+            class="logo__img show-on-light"
+            src="src/assets/Logo Extenso sem Fundo Escuro.svg"
+            alt="MCosta Tech"
+            width="132"
+            height="28"
+          />
+          <img
+            class="logo__img show-on-dark"
+            src="src/assets/Logo Extenso sem Fundo Claro.svg"
+            alt="MCosta Tech"
+            width="132"
+            height="28"
+          />
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#empresas">Para empresas</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            data-theme-toggle
+            aria-label="Alternar entre tema claro e escuro"
+          >
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4.2" />
+              <path
+                d="M12 2.5v2.6M12 18.9v2.6M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M2.5 12h2.6M18.9 12h2.6M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"
+              />
+            </svg>
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z" />
+            </svg>
+          </button>
+
+          <a
+            class="btn btn--primary btn--sm header-cta"
+            href="#contato"
+            data-contact="whatsapp"
+            data-wa-message="Olá! Vim pelo site e preciso de ajuda com tecnologia."
+          >
+            Solicitar atendimento
+          </a>
+
+          <button
+            class="nav-toggle"
+            type="button"
+            data-nav-toggle
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="menu-mobile"
+          >
+            <span class="nav-toggle__bars" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <nav
+      id="menu-mobile"
+      class="mobile-nav"
+      data-mobile-nav
+      data-open="false"
+      aria-label="Navegação mobile"
+    >
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#como-funciona">Como funciona</a></li>
+        <li><a href="#empresas">Para empresas</a></li>
+        <li><a href="#duvidas">Dúvidas</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+      <div class="mobile-nav__cta">
+        <a
+          class="btn btn--primary btn--block"
+          href="#contato"
+          data-contact="whatsapp"
+          data-wa-message="Olá! Vim pelo site e preciso de ajuda com tecnologia."
+        >
+          Solicitar atendimento
+        </a>
+      </div>
+    </nav>
+
+    <main id="conteudo">
+      <!-- ===== HERO ===== -->
+      <section id="inicio" class="hero">
+        <div class="container hero__inner">
+          <div>
+            <span class="hero__eyebrow">MCosta Tech</span>
+            <h1>Tecnologia que resolve.</h1>
+            <p class="hero__subheadline">
+              Suporte, manutenção e soluções em tecnologia para pessoas e
+              pequenos negócios.
+            </p>
+            <p class="hero__lede">
+              Atendimento claro, direto e sem complicação: você entende o
+              problema, aprova o serviço antes de começarmos e acompanha cada
+              etapa até a conclusão.
+            </p>
+
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="#contato"
+                data-contact="whatsapp"
+                data-wa-message="Olá! Vim pelo site e preciso de ajuda com tecnologia."
+              >
+                Solicitar atendimento
+              </a>
+              <a class="btn btn--secondary" href="#servicos"
+                >Conhecer serviços</a
+              >
+            </div>
+
+            <p class="hero__note">
+              Sem compromisso: o orçamento é feito depois da análise do seu
+              caso.
+            </p>
+          </div>
+
+          <div class="hero__visual" aria-hidden="true">
+            <svg
+              viewBox="0 0 220 190"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="18"
+                y="18"
+                width="184"
+                height="118"
+                rx="10"
+                stroke="var(--color-text-muted)"
+                stroke-width="2"
+                opacity="0.5"
+              />
+              <path
+                d="M40 60h70M40 78h100M40 96h60"
+                stroke="var(--brand-blue)"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <circle
+                cx="168"
+                cy="96"
+                r="16"
+                stroke="var(--brand-cyan)"
+                stroke-width="3"
+              />
+              <path
+                d="M162 96l4 5 9-11"
+                stroke="var(--brand-cyan)"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M70 150v14M150 150v14M55 164h110"
+                stroke="var(--color-text-muted)"
+                stroke-width="2"
+                opacity="0.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BENEFÍCIOS ===== -->
+      <section
+        class="section section--tight"
+        aria-labelledby="beneficios-titulo"
+      >
+        <div class="container">
+          <h2 id="beneficios-titulo" class="sr-only">Benefícios</h2>
+          <div class="grid grid--4">
+            <div class="benefit reveal">
+              <span class="benefit__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 11.5a7.5 7.5 0 0 1-11.34 6.45L4 19l1.13-4.4A7.5 7.5 0 1 1 20 11.5Z"
+                  />
+                </svg>
+              </span>
+              <h3>Atendimento claro</h3>
+              <p>
+                Explicamos o problema e o serviço necessário antes de qualquer
+                execução.
+              </p>
+            </div>
+
+            <div class="benefit reveal">
+              <span class="benefit__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="8.5" />
+                  <circle cx="12" cy="12" r="3.2" />
+                </svg>
+              </span>
+              <h3>Soluções práticas</h3>
+              <p>
+                O foco é resolver a necessidade real do seu equipamento ou
+                negócio.
+              </p>
+            </div>
+
+            <div class="benefit reveal">
+              <span class="benefit__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 3l7 3.2v5.3c0 4.6-3 8.3-7 9.5-4-1.2-7-4.9-7-9.5V6.2Z"
+                  />
+                  <path d="M9 12.2l2.1 2.1L15.5 10" />
+                </svg>
+              </span>
+              <h3>Atendimento responsável</h3>
+              <p>
+                Cuidado com o equipamento e com os dados e informações do
+                cliente.
+              </p>
+            </div>
+
+            <div class="benefit reveal">
+              <span class="benefit__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="8.5" cy="8.5" r="3" />
+                  <path d="M2.5 19.5c0-3.3 2.7-5.7 6-5.7s6 2.4 6 5.7" />
+                  <circle cx="17" cy="9.5" r="2.4" />
+                  <path d="M15.6 13.9c2.6.3 4.4 2.4 4.4 5.1" />
+                </svg>
+              </span>
+              <h3>Pessoas e pequenos negócios</h3>
+              <p>
+                Atendimento adaptado para as necessidades de tecnologia do dia a
+                dia.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVIÇOS ===== -->
+      <section id="servicos" class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Serviços</h2>
+            <p>
+              Atendimento sob avaliação prévia. O orçamento é definido após o
+              diagnóstico do equipamento ou da necessidade.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <article class="card service-card reveal">
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M14.7 6.3a3.5 3.5 0 0 1-4.7 4.7L4 17l3 3 6-6a3.5 3.5 0 0 1 4.7-4.7L21 6l-3-3-3.3 3.3Z"
+                  />
+                </svg>
+              </span>
+              <h3>Suporte e Manutenção</h3>
+              <p>
+                Cuidado completo do dia a dia do seu computador ou notebook.
+              </p>
+              <ul>
+                <li>Formatação e reinstalação do Windows</li>
+                <li>Diagnóstico de problemas</li>
+                <li>Manutenção preventiva</li>
+                <li>Limpeza de computadores e notebooks</li>
+                <li>Manutenção de desktops e notebooks</li>
+              </ul>
+            </article>
+
+            <article class="card service-card reveal">
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.4 13.5a7.4 7.4 0 0 0 0-3l1.9-1.5-2-3.4-2.3.6a7.6 7.6 0 0 0-2.6-1.5L14 2.5h-4l-.4 2.2a7.6 7.6 0 0 0-2.6 1.5l-2.3-.6-2 3.4L4.6 10.5a7.4 7.4 0 0 0 0 3l-1.9 1.5 2 3.4 2.3-.6c.75.66 1.63 1.17 2.6 1.5l.4 2.2h4l.4-2.2a7.6 7.6 0 0 0 2.6-1.5l2.3.6 2-3.4-1.9-1.5Z"
+                  />
+                </svg>
+              </span>
+              <h3>Configuração e Instalação</h3>
+              <p>Tudo pronto para usar, do jeito certo desde o início.</p>
+              <ul>
+                <li>Instalação e configuração de programas</li>
+                <li>Instalação e configuração de drivers</li>
+                <li>Configuração de impressoras e periféricos</li>
+              </ul>
+            </article>
+
+            <article class="card service-card reveal">
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Z"
+                  />
+                  <path d="M4 7v10c0 1.7 3.6 3 8 3s8-1.3 8-3V7" />
+                  <path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" />
+                </svg>
+              </span>
+              <h3>Dados e Suporte</h3>
+              <p>Seus arquivos protegidos e ajuda quando você mais precisa.</p>
+              <ul>
+                <li>Backup e transferência de dados</li>
+                <li>Suporte remoto</li>
+              </ul>
+            </article>
+
+            <article class="card service-card reveal">
+              <span class="service-card__icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="8" width="18" height="12" rx="2" />
+                  <path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                </svg>
+              </span>
+              <h3>Pequenos Negócios</h3>
+              <p>
+                Suporte básico de tecnologia para manter o essencial
+                funcionando.
+              </p>
+              <ul>
+                <li>Atendimento básico de tecnologia para pequenos negócios</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== COMO FUNCIONA ===== -->
+      <section id="como-funciona" class="section">
+        <div class="container">
+          <div class="section-head section-head--center">
+            <h2>Como funciona</h2>
+            <p>
+              Um processo simples, do primeiro contato até a conclusão do
+              serviço.
+            </p>
+          </div>
+
+          <ol class="process">
+            <li class="process-step reveal">
+              <span class="process-step__index" aria-hidden="true">1</span>
+              <div>
+                <h3>Entre em contato</h3>
+                <p>
+                  Você explica sua necessidade ou o problema do equipamento.
+                </p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-step__index" aria-hidden="true">2</span>
+              <div>
+                <h3>Análise</h3>
+                <p>Avaliamos o equipamento ou a situação descrita.</p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-step__index" aria-hidden="true">3</span>
+              <div>
+                <h3>Diagnóstico e orçamento</h3>
+                <p>
+                  Apresentamos o problema identificado e os serviços
+                  necessários.
+                </p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-step__index" aria-hidden="true">4</span>
+              <div>
+                <h3>Aprovação</h3>
+                <p>O serviço só é executado depois da sua aprovação.</p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-step__index" aria-hidden="true">5</span>
+              <div>
+                <h3>Execução</h3>
+                <p>O atendimento é realizado conforme o combinado.</p>
+              </div>
+            </li>
+            <li class="process-step reveal">
+              <span class="process-step__index" aria-hidden="true">6</span>
+              <div>
+                <h3>Conclusão</h3>
+                <p>Você recebe as informações sobre o serviço realizado.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===== PARA PEQUENOS NEGÓCIOS ===== -->
+      <section id="empresas" class="section section--alt">
+        <div class="container">
+          <div class="business-panel reveal">
+            <div>
+              <h2>Tecnologia para o dia a dia do seu negócio</h2>
+              <p>
+                A MCosta Tech também atende pequenos negócios que precisam
+                manter equipamentos e recursos básicos de tecnologia
+                funcionando, sem complicação e sem depender de uma equipe de TI
+                própria.
+              </p>
+              <div class="tag-list" style="margin-top: var(--space-md)">
+                <span class="tag">Computadores</span>
+                <span class="tag">Notebooks</span>
+                <span class="tag">Impressoras</span>
+                <span class="tag">Periféricos</span>
+                <span class="tag">Suporte técnico</span>
+              </div>
+              <div class="business-panel__actions">
+                <a
+                  class="btn btn--primary"
+                  href="#contato"
+                  data-contact="whatsapp"
+                  data-wa-message="Olá! Tenho um pequeno negócio e preciso de suporte de tecnologia."
+                >
+                  Falar sobre minha necessidade
+                </a>
+              </div>
+            </div>
+
+            <svg
+              viewBox="0 0 220 170"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <rect
+                x="20"
+                y="20"
+                width="130"
+                height="88"
+                rx="8"
+                stroke="var(--color-text-muted)"
+                stroke-width="2"
+                opacity="0.5"
+              />
+              <path
+                d="M40 50h70M40 66h90M40 82h50"
+                stroke="var(--brand-blue)"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <rect
+                x="150"
+                y="70"
+                width="50"
+                height="60"
+                rx="6"
+                stroke="var(--brand-cyan)"
+                stroke-width="2.5"
+              />
+              <path
+                d="M160 86h30M160 98h30M160 110h18"
+                stroke="var(--brand-cyan)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SOBRE ===== -->
+      <section id="sobre" class="section">
+        <div class="container about__inner">
+          <div>
+            <h2>
+              A MCosta Tech nasceu para tornar a tecnologia mais simples e
+              confiável.
+            </h2>
+            <p>
+              Oferecemos atendimento técnico para pessoas e pequenos negócios,
+              combinando conhecimento técnico, clareza no processo e um
+              atendimento próximo — do primeiro contato até a conclusão do
+              serviço.
+            </p>
+            <p>
+              A empresa está começando agora, com foco em suporte e manutenção,
+              e com espaço para crescer conforme a necessidade dos clientes.
+            </p>
+
+            <div class="about__founder">
+              <span class="about__founder-mark" aria-hidden="true">M</span>
+              <span><strong>Fundador:</strong> Matheus Costa</span>
+            </div>
+          </div>
+
+          <div class="about__logo">
+            <img
+              src="src/assets/logo.svg"
+              alt="Logotipo da MCosta Tech"
+              width="200"
+              height="200"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== AVALIAÇÕES ===== -->
+      <!-- Quando houver avaliações reais, substitua o bloco abaixo por um grid de depoimentos.
+         Para ocultar esta seção antes de existirem avaliações reais, adicione display:none
+         a #avaliacoes ou remova a seção inteira. Nunca preencher com depoimentos fictícios. -->
+      <section id="avaliacoes" class="section section--tight">
+        <div class="container">
+          <div class="reviews-placeholder reveal">
+            <p>Em breve, experiências dos nossos clientes por aqui.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section id="duvidas" class="section section--alt">
+        <div class="container">
+          <div class="section-head">
+            <h2>Dúvidas frequentes</h2>
+          </div>
+
+          <div class="accordion">
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-1"
+                  id="faq-1-trigger"
+                >
+                  Vocês atendem computadores e notebooks?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-1"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-1-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Sim. A MCosta Tech trabalha com manutenção e suporte para
+                    desktops e notebooks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-2"
+                  id="faq-2-trigger"
+                >
+                  Vocês fazem formatação?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-2"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-2-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Sim. A formatação inclui reinstalação do Windows e os
+                    procedimentos definidos no serviço contratado.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-3"
+                  id="faq-3-trigger"
+                >
+                  Backup está incluído na formatação?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-3"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-3-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Não automaticamente. O backup deve ser solicitado e
+                    combinado previamente.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-4"
+                  id="faq-4-trigger"
+                >
+                  Vocês fazem recuperação de dados?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-4"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-4-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Não oferecemos recuperação avançada de dados neste momento.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-5"
+                  id="faq-5-trigger"
+                >
+                  Vocês instalam programas?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-5"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-5-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Sim, desde que o software seja legítimo e possua licença
+                    válida quando necessária.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-6"
+                  id="faq-6-trigger"
+                >
+                  Vocês atendem pequenos negócios?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-6"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-6-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Sim. A MCosta Tech presta suporte básico de tecnologia para
+                    pequenos negócios dentro dos serviços atualmente oferecidos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-7"
+                  id="faq-7-trigger"
+                >
+                  Vocês fazem suporte remoto?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-7"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-7-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Sim, quando o problema puder ser analisado ou resolvido
+                    remotamente.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-accordion-item>
+              <h3>
+                <button
+                  class="accordion-trigger"
+                  data-accordion-trigger
+                  aria-expanded="false"
+                  aria-controls="faq-8"
+                  id="faq-8-trigger"
+                >
+                  Vocês fornecem peças?
+                  <span class="accordion-trigger__icon" aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div
+                class="accordion-panel"
+                id="faq-8"
+                data-accordion-panel
+                role="region"
+                aria-labelledby="faq-8-trigger"
+              >
+                <div class="accordion-panel__inner">
+                  <p>
+                    Pode haver duas possibilidades: você compra a peça indicada,
+                    ou a MCosta Tech realiza a aquisição após aprovação.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTATO ===== -->
+      <section id="contato" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Contato</h2>
+            <p>
+              Fale com a gente pelo canal que preferir ou preencha o formulário
+              abaixo.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-channels">
+              <a
+                class="contact-channel"
+                href="#contato"
+                data-contact="whatsapp"
+                data-wa-message="Olá! Vim pelo site e preciso de ajuda com tecnologia."
+              >
+                <span class="contact-channel__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3Z"
+                    />
+                    <path
+                      d="M8.5 8.8c.2-.6.9-.6 1.3-.2l.9 1c.3.3.3.8 0 1.1l-.5.6c.5 1 1.5 2 2.5 2.5l.6-.5c.3-.3.8-.3 1.1 0l1 .9c.4.4.4 1.1-.2 1.3-1.8.7-4.3.2-6.2-1.7-1.9-1.9-2.4-4.4-1.5-5Z"
+                    />
+                  </svg>
+                </span>
+                <span>
+                  <strong>WhatsApp</strong>
+                  <span>Resposta mais rápida para orçamentos</span>
+                </span>
+              </a>
+
+              <a
+                class="contact-channel"
+                href="#contato"
+                data-contact="instagram"
+              >
+                <span class="contact-channel__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
+                    <circle cx="12" cy="12" r="3.6" />
+                    <circle
+                      cx="16.6"
+                      cy="7.4"
+                      r="0.6"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Instagram</strong>
+                  <span>Acompanhe novidades e bastidores</span>
+                </span>
+              </a>
+
+              <a class="contact-channel" href="mailto:mcostatech@hotmail.com">
+                <span class="contact-channel__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                    <path d="M4 6.5l8 6 8-6" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>E-mail</strong>
+                  <span>mcostatech@hotmail.com</span>
+                </span>
+              </a>
+
+              <a
+                class="contact-channel"
+                href="#contato"
+                data-contact="google-business"
+              >
+                <span class="contact-channel__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"
+                    />
+                    <circle cx="12" cy="9.5" r="2.4" />
+                  </svg>
+                </span>
+                <span>
+                  <strong>Ver perfil no Google</strong>
+                  <span data-contact="region">Atendimento local e remoto</span>
+                </span>
+              </a>
+            </div>
+
+            <form class="card" data-contact-form novalidate>
+              <div class="form-field">
+                <label for="nome">Nome</label>
+                <input
+                  id="nome"
+                  name="nome"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+                <span class="form-field__error" data-field-error></span>
+              </div>
+
+              <div class="form-field">
+                <label for="contato-preferido">Telefone ou e-mail</label>
+                <input
+                  id="contato-preferido"
+                  name="contato"
+                  type="text"
+                  autocomplete="tel"
+                  required
+                />
+                <span class="form-field__error" data-field-error></span>
+              </div>
+
+              <div class="form-field">
+                <label for="equipamento">Tipo de equipamento</label>
+                <select id="equipamento" name="equipamento" required>
+                  <option value="">Selecione</option>
+                  <option value="Desktop">Desktop</option>
+                  <option value="Notebook">Notebook</option>
+                  <option value="Impressora">Impressora</option>
+                  <option value="Outro">Outro</option>
+                </select>
+                <span class="form-field__error" data-field-error></span>
+              </div>
+
+              <div class="form-field">
+                <label for="assunto">Assunto</label>
+                <input id="assunto" name="assunto" type="text" required />
+                <span class="form-field__error" data-field-error></span>
+              </div>
+
+              <div class="form-field">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+                <span class="form-field__error" data-field-error></span>
+              </div>
+
+              <button class="btn btn--primary btn--block" type="submit">
+                Enviar mensagem
+              </button>
+              <p class="form-status" data-form-status role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA FINAL ===== -->
+      <section class="section section--tight">
+        <div class="container">
+          <div class="cta-final reveal">
+            <h2>Precisa resolver um problema com tecnologia?</h2>
+            <p>
+              Conte o que está acontecendo e descubra como a MCosta Tech pode
+              ajudar.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="#contato"
+                data-contact="whatsapp"
+                data-wa-message="Olá! Vim pelo site e preciso de ajuda com tecnologia."
+              >
+                Solicitar atendimento
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <a class="logo" href="#inicio" aria-label="MCosta Tech — início">
+            <img
+              class="logo__img show-on-light"
+              src="src/assets/Logo Extenso sem Fundo Escuro.svg"
+              alt="MCosta Tech"
+              width="132"
+              height="28"
+            />
+            <img
+              class="logo__img show-on-dark"
+              src="src/assets/Logo Extenso sem Fundo Claro.svg"
+              alt="MCosta Tech"
+              width="132"
+              height="28"
+            />
+          </a>
+          <p
+            style="
+              color: var(--color-text-muted);
+              font-size: var(--fs-sm);
+              margin-top: var(--space-2xs);
+            "
+          >
+            Tecnologia que resolve.
+          </p>
+        </div>
+
+        <nav class="footer-links" aria-label="Links do rodapé">
+          <a href="#servicos">Serviços</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#empresas">Para empresas</a>
+          <a href="#duvidas">Dúvidas</a>
+          <a href="#contato">Contato</a>
+          <a href="#contato" data-contact="instagram">Instagram</a>
+          <a href="mailto:mcostatech@hotmail.com">mcostatech@hotmail.com</a>
+        </nav>
+      </div>
+
+      <div class="container" style="margin-top: var(--space-md)">
+        <p style="color: var(--color-text-muted); font-size: var(--fs-xs)">
+          © <span data-current-year>2026</span> MCosta Tech. Todos os direitos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <div class="mobile-cta-bar" data-mobile-cta-bar data-hidden="false">
+      <a
+        class="btn btn--primary btn--block"
+        href="#contato"
+        data-contact="whatsapp"
+        data-wa-message="Olá! Vim pelo site e preciso de ajuda com tecnologia."
+      >
+        Solicitar atendimento
+      </a>
+    </div>
+
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>

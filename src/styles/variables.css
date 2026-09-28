@@ -1,0 +1,113 @@
+/*
+  Design tokens da MCosta Tech.
+  Paleta baseada na identidade já definida da marca: azul elétrico + ciano
+  sobre base azul-marinho/preto no modo escuro, e base clara e neutra no modo claro.
+  Ajustar aqui para propagar mudanças de cor/tipografia para o site inteiro.
+*/
+
+:root {
+  /* ===== Marca ===== */
+  --brand-blue: #147dff;
+  --brand-blue-strong: #0f63d1;
+  --brand-cyan: #00cfff;
+  --brand-navy: #020817;
+
+  /* ===== Tema claro (padrão) ===== */
+  --color-bg: #f6f8fc;
+  --color-surface: #ffffff;
+  --color-surface-alt: #eef2f9;
+  --color-border: #d8e0ec;
+  --color-text: #0b1220;
+  --color-text-muted: #4d5b73;
+  --color-primary: var(--brand-blue-strong);
+  --color-primary-contrast: #ffffff;
+  --color-accent: #0092b8;
+  --color-focus-ring: #0f63d1;
+  --shadow-color: 217deg 45% 30%;
+
+  /* ===== Tipografia ===== */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --fs-xl: clamp(1.6rem, 1.35rem + 1.1vw, 2.1rem);
+  --fs-2xl: clamp(2.1rem, 1.6rem + 2.2vw, 3.25rem);
+
+  --lh-tight: 1.15;
+  --lh-snug: 1.35;
+  --lh-body: 1.6;
+
+  /* ===== Espaçamento ===== */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.25rem;
+  --space-xl: 3.5rem;
+  --space-2xl: 5.5rem;
+
+  --content-max: 74rem;
+  --measure: 62ch;
+
+  /* ===== Forma ===== */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --border-thin: 1px solid var(--color-border);
+
+  /* ===== Elevação (discreta, não o "card kit" genérico) ===== */
+  --shadow-sm: 0 1px 2px hsl(var(--shadow-color) / 0.06);
+  --shadow-md: 0 8px 24px -12px hsl(var(--shadow-color) / 0.22);
+  --shadow-lg: 0 20px 48px -20px hsl(var(--shadow-color) / 0.28);
+
+  /* ===== Movimento ===== */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 260ms;
+  --duration-slow: 480ms;
+
+  /* ===== Layout ===== */
+  --header-height: 4.25rem;
+  --z-header: 100;
+  --z-mobile-nav: 110;
+  --z-mobile-cta: 90;
+}
+
+/* ===== Tema escuro ===== */
+[data-theme="dark"] {
+  --color-bg: var(--brand-navy);
+  --color-surface: #0b1626;
+  --color-surface-alt: #101e33;
+  --color-border: #1e2f47;
+  --color-text: #eef3fb;
+  --color-text-muted: #94a6c4;
+  --color-primary: var(--brand-blue);
+  --color-primary-contrast: #051020;
+  --color-accent: var(--brand-cyan);
+  --color-focus-ring: var(--brand-cyan);
+  --shadow-color: 217deg 80% 4%;
+}
+
+/* Segue preferência do sistema quando o usuário ainda não escolheu manualmente */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: var(--brand-navy);
+    --color-surface: #0b1626;
+    --color-surface-alt: #101e33;
+    --color-border: #1e2f47;
+    --color-text: #eef3fb;
+    --color-text-muted: #94a6c4;
+    --color-primary: var(--brand-blue);
+    --color-primary-contrast: #051020;
+    --color-accent: var(--brand-cyan);
+    --color-focus-ring: var(--brand-cyan);
+    --shadow-color: 217deg 80% 4%;
+  }
+}

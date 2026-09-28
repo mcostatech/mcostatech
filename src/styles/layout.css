@@ -1,0 +1,184 @@
+/* ===== Container ===== */
+.container {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--space-lg);
+  }
+}
+
+/* ===== Ritmo vertical entre seções ===== */
+.section {
+  padding-block: var(--space-2xl);
+}
+
+.section--tight {
+  padding-block: var(--space-xl);
+}
+
+.section--alt {
+  background-color: var(--color-surface-alt);
+}
+
+/* ===== Cabeçalho de seção ===== */
+.section-head {
+  max-width: var(--measure);
+  margin-bottom: var(--space-lg);
+}
+
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-head h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.section-head p {
+  color: var(--color-text-muted);
+  font-size: var(--fs-md);
+}
+
+/* ===== Grids reutilizáveis ===== */
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+.grid--4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 640px) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== Header ===== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: var(--border-thin);
+}
+
+.site-header__inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+/* ===== Hero ===== */
+.hero {
+  padding-block: var(--space-2xl) var(--space-xl);
+}
+
+.hero__inner {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero__inner {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+}
+
+/* ===== Como funciona ===== */
+.process {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+@media (min-width: 900px) {
+  .process {
+    flex-direction: row;
+    gap: var(--space-sm);
+  }
+}
+
+/* ===== Contato ===== */
+.contact-grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+  }
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: var(--border-thin);
+  padding-block: var(--space-lg);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+}
+
+/* Reserva espaço para a barra fixa mobile não sobrepor o rodapé/formulário */
+@media (max-width: 767px) {
+  body {
+    padding-bottom: 4.25rem;
+  }
+
+  body.mobile-cta-hidden {
+    padding-bottom: 0;
+  }
+}
