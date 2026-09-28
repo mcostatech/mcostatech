@@ -96,6 +96,14 @@ p {
   border: 0;
 }
 
+[data-theme="dark"] .show-on-light {
+  display: none;
+}
+
+:root:not([data-theme="dark"]) .show-on-dark {
+  display: none;
+}
+
 /* ===== Skip link ===== */
 .skip-link {
   position: absolute;
